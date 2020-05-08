@@ -318,8 +318,10 @@ Plugin.prototype.structure = function() {
         subHtmlCont +
         '</div>' +
         '</div>';
-
-    document.body.insertAdjacentHTML('beforeend', template);
+    // Set the gallery holder div class where i'll be loaded
+    var holder = document.getElementById("gallery-holder");
+    holder.insertAdjacentHTML('beforeend', template);/* 
+    document.body.insertAdjacentHTML('beforeend', template); */
     this.outer = document.querySelector('.lg-outer');
     this.___slide = this.outer.querySelectorAll('.lg-item');
 
